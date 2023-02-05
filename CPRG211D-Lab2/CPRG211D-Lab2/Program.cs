@@ -88,7 +88,7 @@ namespace CPRG211D_Lab2
             }
             double averageWeeklypay = weeklyPaySum / employees.Count;
 
-            Console.WriteLine("Avarage weekly pay" + averageWeeklypay);
+            Console.WriteLine("Avarage weekly pay" + averageWeeklypay.ToString("n2"));
 
             Wages hightPaidWaged = null;
 
@@ -104,7 +104,7 @@ namespace CPRG211D_Lab2
                 }
             }
 
-            Console.WriteLine("Employee " + hightPaidWaged.Name + "is highest paid " + hightPaidWaged.CalcWeeklyPay());
+            Console.WriteLine("\nEmployee " + hightPaidWaged.Name + "is highest paid  " + hightPaidWaged.CalcWeeklyPay().ToString("n2"));
 
             Salaried lowestPaidWaged = null;
             foreach (Employee employee in employees)
@@ -121,7 +121,7 @@ namespace CPRG211D_Lab2
 
 
             }
-            Console.WriteLine("Employee " + lowestPaidWaged.Name + " is lowest paid " + lowestPaidWaged.CalcWeeklyPay());
+            Console.WriteLine("\nEmployee " + lowestPaidWaged.Name + " is lowest paid " + lowestPaidWaged.CalcWeeklyPay().ToString("n2"));
 
             
             double salariedPercentage = 0;
@@ -137,7 +137,7 @@ namespace CPRG211D_Lab2
 
             }
 
-            Console.WriteLine("Salaried: "+ salaroedEmployeeCount+ "/"+ employees.Count +"("+Math.Round(salariedPercentage, 2)+"%)") ;
+            Console.WriteLine("\nSalaried: "+ salaroedEmployeeCount+ "/"+ employees.Count +"("+Math.Round(salariedPercentage, 2)+"%)") ;
             
             double wagesPercentage = 0;
             double wagesEmployeeCount = 0;
